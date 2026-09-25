@@ -35,13 +35,14 @@ export default {
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        h1: ['32px', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
+        // Unsuffixed sizes are the mobile sizes; `-lg` variants take over at md.
+        h1: ['28px', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
         'h1-lg': ['48px', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
-        h2: ['26px', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        h2: ['22px', { lineHeight: '1.25', letterSpacing: '-0.01em' }],
         'h2-lg': ['38px', { lineHeight: '1.15', letterSpacing: '-0.015em' }],
-        h3: ['19px', { lineHeight: '1.3' }],
+        h3: ['17px', { lineHeight: '1.3' }],
         'h3-lg': ['22px', { lineHeight: '1.3' }],
-        body: ['15px', { lineHeight: '1.65' }],
+        body: ['14px', { lineHeight: '1.6' }],
         'body-lg': ['16px', { lineHeight: '1.65' }],
         small: ['13px', { lineHeight: '1.5' }],
       },

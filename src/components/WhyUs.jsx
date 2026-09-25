@@ -17,11 +17,15 @@ export default function WhyUs() {
       </div>
       <ul className="mt-8 grid gap-4 md:mt-12 md:grid-cols-3 md:gap-6">
         {cards.map((card, i) => (
-          <Card as="li" key={i} className="relative">
-            <span className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 text-navy-900">
-              <Icon name={icons[i]} className="h-5 w-5" />
-            </span>
-            <h3 className="mt-12 font-heading text-h3 font-semibold text-slate-900 md:text-h3-lg">{card.title}</h3>
+          <Card as="li" key={i} className="relative !p-5 md:!p-7">
+            {/* Mobile: icon sits beside the title instead of above it, which
+                drops the empty band the absolute icon needed. */}
+            <div className="flex items-center gap-3 md:block">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-100 text-navy-900 md:absolute md:right-5 md:top-5 md:h-11 md:w-11">
+                <Icon name={icons[i]} className="h-4 w-4 md:h-5 md:w-5" />
+              </span>
+              <h3 className="font-heading text-h3 font-semibold text-slate-900 md:mt-12 md:text-h3-lg">{card.title}</h3>
+            </div>
             <p className="mt-2">{card.body}</p>
           </Card>
         ))}

@@ -75,7 +75,8 @@ export default function HowItWorks() {
                     </span>
                     <span className={`transition-opacity ${isActive ? 'opacity-100' : 'opacity-70'}`}>
                       <span className="block font-heading text-h3 font-semibold text-white md:text-h3-lg">{step.title}</span>
-                      <span className="mt-1 block text-slate-300">{step.body}</span>
+                      {/* Titles carry the meaning on mobile; the detail is desktop-only. */}
+                      <span className="mt-1 hidden text-slate-300 md:block">{step.body}</span>
                     </span>
                   </button>
                 </li>

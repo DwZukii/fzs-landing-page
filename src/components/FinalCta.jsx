@@ -28,7 +28,7 @@ export default function FinalCta() {
           {stats.map((s) => (
             <div key={s.value} className="px-4">
               <dt className="sr-only">{s.label}</dt>
-              <dd className="font-heading text-[34px] font-extrabold leading-none text-gold-500 md:text-[44px]">{s.value}</dd>
+              <dd className="font-heading whitespace-nowrap text-[28px] font-extrabold leading-none text-gold-500 md:text-[44px]">{s.value}</dd>
               <dd className="mt-2 text-small text-slate-300">{s.label}</dd>
             </div>
           ))}

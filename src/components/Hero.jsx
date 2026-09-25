@@ -14,10 +14,6 @@ export default function Hero() {
           on a tablet. */}
       <div className="mx-auto grid max-w-content items-center gap-8 px-5 pb-10 pt-10 md:gap-10 md:px-12 md:pb-14 md:pt-16 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-navy-800 px-3 py-1 text-small font-medium text-slate-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true" />
-            {t('hero.eyebrow')}
-          </p>
           <h1 className="font-heading text-h1 font-extrabold text-white lg:text-h1-lg">{t('hero.headline')}</h1>
           <p className="mt-4 max-w-xl text-body text-slate-300 md:mt-5 md:text-[18px] md:leading-relaxed">
             {t('hero.sub')}
@@ -29,7 +25,8 @@ export default function Hero() {
                   makes the primary CTA look broken. The label alone is clear. */}
               <Icon name="arrowRight" className="hidden h-5 w-5 min-[390px]:block" />
             </Button>
-            <p className="mt-3 text-small text-slate-300">{t('hero.reassurance')}</p>
+            {/* Hidden on mobile: the trust strip right below already says "no upfront fee". */}
+            <p className="mt-3 hidden text-small text-slate-300 md:block">{t('hero.reassurance')}</p>
           </div>
         </div>
 

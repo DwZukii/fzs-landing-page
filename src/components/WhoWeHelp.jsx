@@ -14,17 +14,21 @@ export default function WhoWeHelp() {
         <Eyebrow>{t('who.eyebrow')}</Eyebrow>
         <H2>{t('who.heading')}</H2>
       </div>
-      <ul className="mt-8 grid gap-4 md:mt-12 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
+      {/* Mobile: a compact 2x2 grid of icon + title. The descriptions and
+          per-card links only appear from md, where there is room for them. */}
+      <ul className="mt-6 grid grid-cols-2 gap-3 md:mt-12 md:gap-6 lg:grid-cols-4">
         {cards.map((card, i) => (
-          <Card as="li" key={i} className="relative flex flex-col">
-            <span className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 text-navy-900">
-              <Icon name={icons[i]} className="h-5 w-5" />
+          <Card as="li" key={i} className="relative flex flex-col !p-4 md:!p-7">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold-100 text-navy-900 md:absolute md:right-5 md:top-5 md:h-11 md:w-11">
+              <Icon name={icons[i]} className="h-4 w-4 md:h-5 md:w-5" />
             </span>
-            <h3 className="mt-12 font-heading text-h3 font-semibold text-slate-900 md:text-h3-lg">{card.title}</h3>
-            <p className="mt-2 flex-1">{card.body}</p>
+            <h3 className="mt-3 font-heading text-[15px] font-semibold leading-snug text-slate-900 md:mt-12 md:text-h3-lg">
+              {card.title}
+            </h3>
+            <p className="mt-2 hidden flex-1 md:block">{card.body}</p>
             <a
               href="#kalkulator"
-              className="mt-5 inline-flex items-center gap-1.5 self-start rounded font-heading text-small font-semibold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:decoration-navy-900 md:text-[14px]"
+              className="mt-5 hidden items-center gap-1.5 self-start rounded font-heading text-small font-semibold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:decoration-navy-900 md:inline-flex md:text-[14px]"
             >
               {t('who.link')}
               <Icon name="arrowRight" className="h-4 w-4" />

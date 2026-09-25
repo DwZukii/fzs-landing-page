@@ -9,10 +9,10 @@ export default function ScamWarning() {
   return (
     <section id="amaran" className="scroll-mt-20 py-14 md:py-24" aria-labelledby="amaran-heading">
       <Container>
-        <div className="rounded-card border-l-[6px] border-warn bg-gold-100 p-6 md:p-10">
-          <div className="flex flex-col gap-5 md:flex-row md:gap-8">
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-warn text-white">
-              <Icon name="alert" className="h-7 w-7" />
+        <div className="rounded-card border-l-[6px] border-warn bg-gold-100 p-5 md:p-10">
+          <div className="flex flex-col gap-3 md:flex-row md:gap-8">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-warn text-white md:h-14 md:w-14">
+              <Icon name="alert" className="h-5 w-5 md:h-7 md:w-7" />
             </span>
             <div className="max-w-3xl">
               <h2 id="amaran-heading" className="font-heading text-h2 font-extrabold text-slate-900 md:text-h2-lg">
@@ -25,7 +25,8 @@ export default function ScamWarning() {
                   {t('scam.p1After')}
                 </p>
                 <p>{t('scam.p2')}</p>
-                <p>{t('scam.p3')}</p>
+                {/* Mobile skips this: the "Nombor rasmi" line below says the same thing. */}
+                <p className="hidden md:block">{t('scam.p3')}</p>
               </div>
               <p className="mt-5 flex flex-wrap items-center gap-2 font-medium text-slate-900">
                 {t('scam.official')}

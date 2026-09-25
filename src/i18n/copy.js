@@ -23,7 +23,6 @@ export const copy = {
       },
     },
     hero: {
-      eyebrow: 'Perunding pembiayaan berdaftar SSM',
       headline: 'Pembiayaan Peribadi Penjawat Awam & Swasta',
       sub: 'Kami bantu anda banding pakej pembiayaan daripada beberapa bank dan koperasi, dan uruskan permohonan dari awal hingga akhir.',
       cta: 'Semak Kelayakan Percuma',
@@ -33,7 +32,6 @@ export const copy = {
     },
     trust: {
       noFee: 'Tanpa bayaran pendahuluan',
-      ssm: 'Berdaftar SSM 202303129497',
       human: 'Perunding sebenar, bukan bot',
     },
     calc: {
@@ -204,7 +202,7 @@ export const copy = {
       items: [
         {
           q: 'Adakah FZS Success sebuah bank?',
-          a: 'Tidak. Kami perunding pembiayaan berdaftar SSM. Kami bantu anda memohon daripada bank dan koperasi. Kelulusan dan kadar ditentukan sepenuhnya oleh pihak bank.',
+          a: 'Tidak. Kami perunding pembiayaan. Kami bantu anda memohon daripada bank dan koperasi. Kelulusan dan kadar ditentukan sepenuhnya oleh pihak bank.',
         },
         {
           q: 'Siapa yang layak memohon?',
@@ -275,7 +273,6 @@ export const copy = {
       },
     },
     hero: {
-      eyebrow: 'SSM-registered financing consultancy',
       headline: 'Personal Financing for Public & Private Sectors',
       sub: 'We compare financing packages across several banks and cooperatives, and handle your application from start to finish.',
       cta: 'Check Your Eligibility',
@@ -285,7 +282,6 @@ export const copy = {
     },
     trust: {
       noFee: 'No upfront fees',
-      ssm: 'SSM registered 202303129497',
       human: 'Real consultants, not bots',
     },
     calc: {
@@ -457,7 +453,7 @@ export const copy = {
       items: [
         {
           q: 'Is FZS Success a bank?',
-          a: 'No. We are an SSM-registered financing consultancy. We help you apply to banks and cooperatives. Approval and rates are decided entirely by the bank.',
+          a: 'No. We are a financing consultancy. We help you apply to banks and cooperatives. Approval and rates are decided entirely by the bank.',
         },
         {
           q: 'Who can apply?',

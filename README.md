@@ -65,6 +65,14 @@ Two widths, and everything hangs off them:
 - **The hero goes two-column at `lg`, not `md`.** At `md` the text column is
   ~370px while the H1 steps up to 48px, which wraps the headline to five lines
   on a tablet.
+- **Mobile shows less text than desktop, on purpose.** Card descriptions in
+  "Siapa kami bantu", step descriptions in "Cara ia berfungsi", the hero
+  reassurance line, the calculator subtitle and the scam warning's third
+  paragraph are `hidden md:block`. The copy still exists in both languages.
+  Don't un-hide it on mobile without checking how crowded the page gets.
+- **SSM is mentioned twice on the page, on purpose:** the "Berdaftar dan telus"
+  card and the footer registration number. Don't add it back to the hero or
+  the trust strip.
 - Check any layout change against **360px and 2560px**, not just a laptop.
   `npm run build && npm run preview`, then resize.
 

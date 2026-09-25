@@ -15,13 +15,13 @@ export default function Faq() {
         <div className="space-y-3">
           {items.map((item, i) => (
             <details key={i} className="group rounded-card border border-slate-200 bg-white open:shadow-card">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-card p-5 font-heading text-[16px] font-semibold text-slate-900 md:p-6 md:text-[18px]">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-card p-4 font-heading text-[15px] font-semibold text-slate-900 md:p-6 md:text-[18px]">
                 {item.q}
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sand-100 text-navy-900 transition-transform group-open:rotate-180">
                   <Icon name="chevronDown" className="h-4 w-4" />
                 </span>
               </summary>
-              <p className="px-5 pb-5 md:px-6 md:pb-6">{item.a}</p>
+              <p className="px-4 pb-4 md:px-6 md:pb-6">{item.a}</p>
             </details>
           ))}
         </div>
