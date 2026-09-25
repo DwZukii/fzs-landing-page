@@ -18,7 +18,7 @@ export function Eyebrow({ children, dark = false }) {
 export function H2({ children, dark = false, className = '', ...props }) {
   return (
     <h2
-      className={`font-heading text-h2 font-extrabold md:text-h2-lg ${dark ? 'text-white' : 'text-slate-900'} ${className}`}
+      className={`font-heading text-h2 font-semibold md:text-h2-lg ${dark ? 'text-white' : 'text-slate-900'} ${className}`}
       {...props}
     >
       {children}

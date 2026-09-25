@@ -6,7 +6,7 @@
 // its aria-label.
 export default function Wordmark({ dark = false, compact = false, className = '' }) {
   return (
-    <span className={`inline-flex items-center gap-1.5 font-heading font-extrabold tracking-tight ${className}`}>
+    <span className={`inline-flex items-center gap-1.5 font-heading font-bold tracking-tight ${className}`}>
       <span className={`rounded-md px-1.5 py-0.5 text-gold-500 ${dark ? 'bg-navy-800' : 'bg-navy-900'}`}>FZS</span>
       <span className={`${dark ? 'text-white' : 'text-navy-900'} ${compact ? 'hidden min-[480px]:inline' : ''}`}>
         SUCCESS

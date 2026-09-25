@@ -144,7 +144,7 @@ export default function CalculatorInputs({ values, errors, maxTenure, onChange }
           <label htmlFor="tempoh" className="field-label">
             {t('calc.tempoh')}
           </label>
-          <span className="font-heading text-body-lg font-extrabold text-navy-900 tabular-nums" aria-hidden="true">
+          <span className="font-heading text-body-lg font-bold text-navy-900 tabular-nums" aria-hidden="true">
             {t('calc.tempohValue', { n: values.tempoh })}
           </span>
         </div>

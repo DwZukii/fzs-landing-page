@@ -14,7 +14,7 @@ export default function Hero() {
           on a tablet. */}
       <div className="mx-auto grid max-w-content items-center gap-8 px-5 pb-10 pt-10 md:gap-10 md:px-12 md:pb-14 md:pt-16 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <h1 className="font-heading text-h1 font-extrabold text-white lg:text-h1-lg">{t('hero.headline')}</h1>
+          <h1 className="font-heading text-h1 font-semibold text-white lg:text-h1-lg">{t('hero.headline')}</h1>
           <p className="mt-4 max-w-xl text-body text-slate-300 md:mt-5 md:text-[18px] md:leading-relaxed">
             {t('hero.sub')}
           </p>

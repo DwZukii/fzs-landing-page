@@ -36,7 +36,7 @@ export default function CalculatorResult({ result }) {
           {t('result.badge')}
         </span>
       </div>
-      <p className="mt-2 font-heading text-[32px] font-extrabold leading-tight text-navy-900 tabular-nums min-[400px]:text-[36px] md:text-[48px]">
+      <p className="mt-2 font-heading text-[32px] font-bold leading-tight text-navy-900 tabular-nums min-[400px]:text-[36px] md:text-[48px]">
         <span className="whitespace-nowrap">{formatRM(result.low)}</span>
         <span className="px-2 font-semibold">–</span>
         <span className="whitespace-nowrap">{formatRM(result.high)}</span>

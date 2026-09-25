@@ -73,6 +73,11 @@ Two widths, and everything hangs off them:
 - **SSM is mentioned twice on the page, on purpose:** the "Berdaftar dan telus"
   card and the footer registration number. Don't add it back to the hero or
   the trust strip.
+- **Font is DM Sans, self-hosted** through `@fontsource-variable/dm-sans`
+  (imported in `src/main.jsx`), not Google Fonts. Headings are weight 600, not
+  800; the heavier weight is what made the page read as bulky. To try another
+  font, install its `@fontsource-variable/*` package, swap the import in
+  `main.jsx` and the two `fontFamily` entries in `tailwind.config.js`.
 - Check any layout change against **360px and 2560px**, not just a laptop.
   `npm run build && npm run preview`, then resize.
 

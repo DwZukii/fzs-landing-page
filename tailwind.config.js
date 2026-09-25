@@ -31,8 +31,10 @@ export default {
         whatsapp: '#25D366', // floating WhatsApp button only
       },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        // DM Sans, self-hosted via @fontsource-variable/dm-sans (imported in
+        // main.jsx). One variable file covers every weight we use.
+        heading: ['"DM Sans Variable"', 'system-ui', 'sans-serif'],
+        body: ['"DM Sans Variable"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         // Unsuffixed sizes are the mobile sizes; `-lg` variants take over at md.

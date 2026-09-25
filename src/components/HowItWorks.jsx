@@ -65,7 +65,7 @@ export default function HowItWorks() {
                     }`}
                   >
                     <span
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 font-heading font-extrabold transition-colors ${
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 font-heading font-bold transition-colors ${
                         isActive
                           ? 'border-gold-500 bg-gold-500 text-navy-900'
                           : 'border-slate-300/50 text-slate-300/70'

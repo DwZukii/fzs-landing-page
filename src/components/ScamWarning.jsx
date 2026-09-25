@@ -15,13 +15,13 @@ export default function ScamWarning() {
               <Icon name="alert" className="h-5 w-5 md:h-7 md:w-7" />
             </span>
             <div className="max-w-3xl">
-              <h2 id="amaran-heading" className="font-heading text-h2 font-extrabold text-slate-900 md:text-h2-lg">
+              <h2 id="amaran-heading" className="font-heading text-h2 font-semibold text-slate-900 md:text-h2-lg">
                 {t('scam.heading')}
               </h2>
               <div className="mt-4 space-y-3 text-slate-900">
                 <p>
                   {t('scam.p1Before')}
-                  <strong className="font-extrabold text-warn">{t('scam.p1Strong')}</strong>
+                  <strong className="font-bold text-warn">{t('scam.p1Strong')}</strong>
                   {t('scam.p1After')}
                 </p>
                 <p>{t('scam.p2')}</p>
@@ -30,7 +30,7 @@ export default function ScamWarning() {
               </div>
               <p className="mt-5 flex flex-wrap items-center gap-2 font-medium text-slate-900">
                 {t('scam.official')}
-                <WhatsAppLink className="rounded font-heading font-extrabold text-navy-900 underline decoration-warn decoration-2 underline-offset-4">
+                <WhatsAppLink className="rounded font-heading font-bold text-navy-900 underline decoration-warn decoration-2 underline-offset-4">
                   {WHATSAPP_DISPLAY}
                 </WhatsAppLink>
               </p>
