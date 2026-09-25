@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FZS Success — Pembiayaan Peribadi Kerajaan &amp; Swasta</title>
+    <meta
+      name="description"
+      content="Perunding pembiayaan berdaftar SSM untuk kakitangan kerajaan, swasta dan pesara. Mohon semakan kelayakan percuma — tiada bayaran pendahuluan."
+    />
+    <meta name="theme-color" content="#0A1F3D" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ms_MY" />
+    <meta property="og:site_name" content="FZS Success" />
+    <meta property="og:title" content="FZS Success — Pembiayaan Peribadi Kerajaan &amp; Swasta" />
+    <meta
+      property="og:description"
+      content="Mohon semakan kelayakan pembiayaan anda secara percuma. Perunding sebenar, tiada bayaran pendahuluan."
+    />
+    <!-- TODO: add og:image (1200x630 JPG/PNG) and og:url once the real domain is confirmed. -->
+
+    <!-- Fonts: latin only, swap so text renders immediately on slow 4G -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;800&display=swap&subset=latin"
+    />
+
+    <!-- Meta Pixel. ID comes from VITE_META_PIXEL_ID at build time; skipped when unset. -->
+    <script>
+      (function () {
+        var id = '%VITE_META_PIXEL_ID%';
+        if (!/^\d+$/.test(id)) return;
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', id);
+        fbq('track', 'PageView');
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

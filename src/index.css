@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    @apply bg-sand-50 font-body text-body text-slate-600 antialiased md:text-body-lg;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-heading;
+  }
+  :focus-visible {
+    outline: 3px solid theme('colors.gold.500');
+    outline-offset: 2px;
+  }
+  /* Remove number spinners if any number input slips in */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply block w-full rounded-input border border-slate-200 bg-white px-4 py-3 text-body-lg text-slate-900 transition-colors placeholder:text-slate-600/60 hover:border-slate-600/40 focus:border-navy-900 focus:outline-none focus-visible:outline-none focus:ring-2 focus:ring-gold-500;
+  }
+  .input-field[aria-invalid='true'] {
+    @apply border-warn;
+  }
+  .field-label {
+    @apply mb-1.5 block font-heading text-small font-semibold text-slate-900 md:text-[14px];
+  }
+  .field-help {
+    @apply mt-1.5 text-small text-slate-600;
+  }
+  .field-error {
+    @apply mt-1.5 text-small font-medium text-warn;
+  }
+  /* Honeypot: off-screen rather than display:none so naive bots still fill it */
+  .hp-field {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .animate-slide-in {
+    animation: slide-in 280ms ease-out both;
+  }
+  .animate-fade-in {
+    animation: fade-in 240ms ease-out both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-slide-in,
+    .animate-fade-in {
+      animation: none;
+    }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

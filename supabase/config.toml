@@ -1,0 +1,5 @@
+project_id = "zzxlgfffbgiexecfxbmd"
+
+# The caller is an anonymous browser, so JWT verification must be off.
+[functions.submit-lead]
+verify_jwt = false
