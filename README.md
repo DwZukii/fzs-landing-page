@@ -42,6 +42,32 @@ Vercel → Project → Settings → Environment Variables.
 | Pixel + UTM capture | `index.html`, `src/lib/tracking.js` |
 | Lead endpoint (server) | `supabase/functions/submit-lead/index.ts` |
 
+## Layout rules (do not break in future edits)
+
+Two widths, and everything hangs off them:
+
+| Token | Width | Used by |
+|---|---|---|
+| `max-w-shell` | 1400px | The navy `DarkPanel` cards. Caps how wide a panel can grow. |
+| `max-w-content` | 1140px | Every text/content column, including inside a panel. |
+
+- **Anything readable lives in `max-w-content`.** Left unbounded inside a
+  full-bleed panel, a row spreads to the panel edges while the text above it
+  stays centred — which is how the trust strip ended up 2528px wide on a 2560px
+  monitor.
+- **The header uses `md:px-12`** to match the hero's inner padding. Both centre
+  `max-w-content` on the viewport, so the wordmark lines up with the H1 at any
+  width. Change one and you have to change the other.
+- **Decorative `Squiggle`s are absolutely positioned**, so they need a
+  `relative` ancestor that is the content column, not the full-width section,
+  or they strand themselves at the edge of a wide monitor. `from="lg"` delays
+  one that anchors to an element which only settles at `lg`.
+- **The hero goes two-column at `lg`, not `md`.** At `md` the text column is
+  ~370px while the H1 steps up to 48px, which wraps the headline to five lines
+  on a tablet.
+- Check any layout change against **360px and 2560px**, not just a laptop.
+  `npm run build && npm run preview`, then resize.
+
 ## Lead capture — Supabase
 
 Leads go to `public.web_leads` in the **TeleManager** Supabase project
@@ -134,7 +160,8 @@ These are marked `TODO` in the code. Nothing below has been guessed.
 6. **Real consultant photo** for the hero. Currently an Unsplash stock photo
    (`public/consultant.webp`, free for commercial use, no attribution needed).
    The trust strip claims "Perunding sebenar", so a genuine face is worth more.
-   The photo is hidden below `md` to keep the CTA above the fold on mobile.
+   The photo now shows at every width; on a stacked layout it sits below the
+   CTA, so the CTA still lands above the fold on mobile.
 7. **Logo file** (currently a text wordmark in `src/components/Wordmark.jsx`).
 8. **Domain name** — do not ship ads to a `*.vercel.app` URL; it reads as a
    scam and will hurt conversion.

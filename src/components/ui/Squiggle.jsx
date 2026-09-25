@@ -36,13 +36,18 @@ const shapes = {
 
 const viewBoxes = { squiggle: '0 0 74 44', burst: '0 0 74 74', dots: '0 0 60 36', loop: '0 0 74 60' };
 
-export default function Squiggle({ shape = 'squiggle', className = '' }) {
+// `from` is the breakpoint the accent appears at. Accents anchored to an
+// element that only takes its final position at lg (the hero photo) need
+// 'lg', or they drift off on their own between md and lg.
+const appearsAt = { md: 'md:block', lg: 'lg:block' };
+
+export default function Squiggle({ shape = 'squiggle', from = 'md', className = '' }) {
   return (
     <svg
       aria-hidden="true"
       focusable="false"
       viewBox={viewBoxes[shape]}
-      className={`pointer-events-none absolute hidden text-gold-500 md:block ${className}`}
+      className={`pointer-events-none absolute hidden text-gold-500 ${appearsAt[from]} ${className}`}
     >
       {shapes[shape]}
     </svg>

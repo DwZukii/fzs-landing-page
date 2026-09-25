@@ -46,7 +46,12 @@ export default {
         small: ['13px', { lineHeight: '1.5' }],
       },
       maxWidth: {
+        // Text/content column. Everything readable lines up to this.
         content: '1140px',
+        // Outer shell for the full-bleed navy panels. Without a cap they keep
+        // growing on wide monitors while the content column stays at 1140,
+        // which leaves the content marooned in the middle of a huge panel.
+        shell: '1400px',
       },
       borderRadius: {
         panel: '28px',

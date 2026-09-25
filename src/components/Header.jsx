@@ -10,7 +10,7 @@ function LanguageToggle() {
       type="button"
       onClick={() => setLang(value)}
       aria-pressed={lang === value}
-      className={`rounded-full px-2.5 py-1 text-small font-semibold transition-colors ${
+      className={`rounded-full px-2 py-1 text-small font-semibold transition-colors min-[480px]:px-2.5 ${
         lang === value ? 'bg-navy-900 text-white' : 'text-slate-600 hover:text-navy-900'
       }`}
     >
@@ -40,15 +40,23 @@ export default function Header() {
     <header
       className={`sticky top-0 z-40 transition-colors ${scrolled ? 'bg-sand-50/95 shadow-header backdrop-blur' : 'bg-transparent'}`}
     >
-      <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-3 px-4 md:h-[72px] md:px-8">
+      {/* md:px-12 matches the hero's inner padding, so the wordmark lines up
+          with the H1 instead of sitting 16px to its left. */}
+      <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-2 px-4 md:h-[72px] md:gap-3 md:px-12">
         <a href="#top" className="shrink-0 rounded-md text-[15px] min-[390px]:text-[17px] md:text-lg" aria-label="FZS Success">
-          <Wordmark />
+          <Wordmark compact />
         </a>
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex shrink-0 items-center gap-2 md:gap-3">
           <LanguageToggle />
-          <Button as="a" href="#kalkulator" size="sm" className="whitespace-nowrap" aria-label={t('nav.cta')}>
-            <span className="min-[400px]:hidden" aria-hidden="true">{t('nav.ctaShort')}</span>
-            <span className="hidden min-[400px]:inline" aria-hidden="true">{t('nav.cta')}</span>
+          <Button
+            as="a"
+            href="#kalkulator"
+            size="sm"
+            className="whitespace-nowrap px-3 min-[480px]:px-4"
+            aria-label={t('nav.cta')}
+          >
+            <span className="min-[480px]:hidden" aria-hidden="true">{t('nav.ctaShort')}</span>
+            <span className="hidden min-[480px]:inline" aria-hidden="true">{t('nav.cta')}</span>
           </Button>
         </div>
       </div>

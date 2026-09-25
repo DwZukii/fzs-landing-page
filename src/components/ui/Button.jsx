@@ -11,7 +11,9 @@ const variants = {
 const sizes = {
   sm: 'px-4 py-2 text-small',
   md: 'px-6 py-3 text-body md:text-body-lg',
-  lg: 'px-5 py-4 text-body-lg sm:px-7',
+  // 15px text below sm: at 360px "Semak Kelayakan Percuma" plus the arrow
+  // wraps to two lines at 16px, which reads as a broken button.
+  lg: 'px-4 py-4 text-body sm:px-7 sm:text-body-lg',
 };
 
 export default function Button({ as: Tag = 'button', variant = 'primary', size = 'md', className = '', ...props }) {

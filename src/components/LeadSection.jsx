@@ -15,8 +15,13 @@ export default function LeadSection() {
   const [calc, setCalc] = useState(null);
 
   return (
-    <Section id="kalkulator" className="relative">
-      <Squiggle shape="loop" className="right-10 top-16 h-14 w-16" />
+    <Section id="kalkulator">
+      {/* This wrapper is the accent's positioning context. Without it the
+          accent anchors to the full-width section and strands itself at the
+          far right of a wide monitor, away from anything it decorates. */}
+      <div className="relative">
+        <Squiggle shape="loop" className="right-0 top-10 h-14 w-16" />
+      </div>
       <div className="mx-auto max-w-2xl text-center">
         <Eyebrow>{t('lead.eyebrow')}</Eyebrow>
         <H2>{t('lead.heading')}</H2>
