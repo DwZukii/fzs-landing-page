@@ -8,8 +8,8 @@ import WhatsAppLink from './ui/WhatsAppLink.jsx';
 import LeadForm from './Calculator/LeadForm.jsx';
 import Calculator from './Calculator/Calculator.jsx';
 
-// The form is the page's job. The calculator sits under it as an optional
-// extra; when it produces a result, those figures ride along with the lead.
+// The form is the page's job. The calculator sits under it, always open;
+// when it produces a result, those figures ride along with the lead.
 export default function LeadSection() {
   const { t } = useLanguage();
   const [calc, setCalc] = useState(null);

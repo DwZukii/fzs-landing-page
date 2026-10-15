@@ -35,9 +35,7 @@ export const copy = {
       human: 'Perunding sebenar, bukan bot',
     },
     calc: {
-      optional: 'Pilihan',
-      toggleTitle: 'Kalkulator anggaran kelayakan',
-      toggleSub: 'Nak tahu anggaran jumlah pembiayaan anda? Buka kalkulator ini.',
+      title: 'Kalkulator anggaran kelayakan',
       intro: 'Masukkan butiran slip gaji anda untuk melihat anggaran. Ini anggaran kasar sahaja — perunding kami akan buat semakan sebenar.',
       gajiPokok: 'Gaji Pokok Bulanan (RM)',
       gajiPokokHelp: 'Gaji pokok sahaja, tidak termasuk elaun.',
@@ -285,9 +283,7 @@ export const copy = {
       human: 'Real consultants, not bots',
     },
     calc: {
-      optional: 'Optional',
-      toggleTitle: 'Eligibility estimate calculator',
-      toggleSub: 'Want a rough idea of how much you could get? Open the calculator.',
+      title: 'Eligibility estimate calculator',
       intro: 'Enter the figures from your payslip to see an estimate. This is a rough guide only — our consultants will do the real check.',
       gajiPokok: 'Monthly Basic Salary (RM)',
       gajiPokokHelp: 'Basic salary only, excluding allowances.',

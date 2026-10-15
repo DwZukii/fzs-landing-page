@@ -39,20 +39,27 @@ export default function Hero() {
           {/* Stock photo from Unsplash (free for commercial use, no attribution required).
               TODO: replace with a real photo of an FZS consultant — the trust strip claims
               "Perunding sebenar", so a genuine face is worth more than stock here.
-              Landscape band while the hero is stacked (a 4:5 portrait at full width is a
-              tower that pushes the form off the screen); portrait only at lg, where the
-              photo becomes the side column. */}
+
+              Art-directed, not CSS-cropped. While the hero is stacked, a 4:5 portrait at
+              full width is a tower that pushes the form off the screen, so mobile and
+              tablet get the original 3:2 landscape frame, uncropped. Forcing the portrait
+              file into a landscape box instead cut off the top and bottom of the shot.
+              The portrait crop is only used at lg, where the photo is the side column.
+              width/height on each <source> lets the browser reserve the right box for
+              whichever file it picks, so there is no layout shift either way. */}
           <picture>
-            <source srcSet="/consultant.webp" type="image/webp" />
+            <source media="(min-width: 1024px)" type="image/webp" srcSet="/consultant.webp" width={800} height={1000} />
+            <source media="(min-width: 1024px)" srcSet="/consultant.jpg" width={800} height={1000} />
+            <source type="image/webp" srcSet="/consultant-wide.webp" width={1040} height={692} />
             <img
-              src="/consultant.jpg"
+              src="/consultant-wide.jpg"
               alt={t('hero.photoAlt')}
-              width={800}
-              height={1000}
+              width={1040}
+              height={692}
               loading="eager"
               fetchpriority="high"
               decoding="async"
-              className="relative mx-auto aspect-[16/11] w-full max-w-[520px] rounded-[20px] object-cover object-top shadow-[0_18px_48px_rgba(0,0,0,.28)] lg:aspect-[4/5] lg:max-w-[400px] lg:rounded-[24px] lg:object-center"
+              className="relative mx-auto aspect-[3/2] w-full max-w-[520px] rounded-[20px] object-cover shadow-[0_18px_48px_rgba(0,0,0,.28)] lg:aspect-[4/5] lg:max-w-[400px] lg:rounded-[24px]"
             />
           </picture>
         </div>

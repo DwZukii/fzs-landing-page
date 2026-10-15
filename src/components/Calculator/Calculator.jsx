@@ -94,27 +94,18 @@ export default function Calculator({ onResult }) {
   const result = payload?.result;
 
   return (
-    <details className="group mt-5 rounded-card border border-slate-200 bg-white shadow-card">
-      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 rounded-card p-4 md:p-6">
-        <span className="flex items-start gap-3">
-          <span className="mt-0.5 flex h-9 w-9 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-gold-100 text-navy-900">
-            <Icon name="calculator" className="h-5 w-5" />
-          </span>
-          <span>
-            <span className="flex flex-wrap items-center gap-2">
-              <span className="font-heading text-[15px] font-semibold text-slate-900 md:text-h3">{t('calc.toggleTitle')}</span>
-              <span className="rounded-full bg-sand-100 px-2 py-0.5 text-small font-semibold text-slate-600">
-                {t('calc.optional')}
-              </span>
-            </span>
-            {/* Subtitle is desktop-only; on mobile the title and "Pilihan" badge say enough. */}
-            <span className="mt-1 hidden text-small text-slate-600 md:block">{t('calc.toggleSub')}</span>
-          </span>
+    <section
+      aria-labelledby="calc-title"
+      className="mt-5 rounded-card border border-slate-200 bg-white shadow-card"
+    >
+      <div className="flex items-center gap-3 p-4 md:p-6">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-100 text-navy-900 md:h-10 md:w-10">
+          <Icon name="calculator" className="h-5 w-5" />
         </span>
-        <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sand-100 text-navy-900 transition-transform group-open:rotate-180">
-          <Icon name="chevronDown" className="h-4 w-4" />
-        </span>
-      </summary>
+        <h3 id="calc-title" className="font-heading text-[15px] font-semibold text-slate-900 md:text-h3">
+          {t('calc.title')}
+        </h3>
+      </div>
 
       <div className="border-t border-slate-200 p-5 md:p-7">
         <p className="mb-6 text-small text-slate-600">{t('calc.intro')}</p>
@@ -136,6 +127,6 @@ export default function Calculator({ onResult }) {
           )}
         </div>
       </div>
-    </details>
+    </section>
   );
 }
