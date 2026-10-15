@@ -1,0 +1,8 @@
+# Keep local env files out of CLI deploy uploads. .env.local holds the
+# Vercel OIDC token written by `vercel link`; production env vars are set on
+# the Vercel project instead (see README).
+.env
+.env.local
+.env.*.local
+node_modules
+dist
