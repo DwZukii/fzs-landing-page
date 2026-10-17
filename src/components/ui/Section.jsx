@@ -1,6 +1,8 @@
 // Light section: vertical rhythm + centred content column.
+// md:px-12 matches the header, and PanelContainer (ui/DarkPanel.jsx) is tuned
+// to land on the same edges, so every section shares one left/right line.
 export function Container({ className = '', ...props }) {
-  return <div className={`mx-auto w-full max-w-content px-5 md:px-8 ${className}`} {...props} />;
+  return <div className={`mx-auto w-full max-w-content px-5 md:px-12 ${className}`} {...props} />;
 }
 
 export function Eyebrow({ children, dark = false }) {

@@ -18,6 +18,13 @@
   h2,
   h3 {
     @apply font-heading;
+    /* Even out multi-line headings so none ends on a lone word ("...kerajaan
+       dan / swasta"). Browsers without support just wrap normally. */
+    text-wrap: balance;
+  }
+  p {
+    /* Avoids a single orphaned word on the last line of body copy. */
+    text-wrap: pretty;
   }
   :focus-visible {
     outline: 3px solid theme('colors.gold.500');

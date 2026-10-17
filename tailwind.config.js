@@ -51,6 +51,13 @@ export default {
       maxWidth: {
         // Text/content column. Everything readable lines up to this.
         content: '1140px',
+        // Content column *inside* a DarkPanel. The panel is inset 16px from
+        // each viewport edge, so a column 32px narrower with 16px less padding
+        // (PanelContainer: md:px-8 vs Container's md:px-12) puts panel content
+        // on exactly the same left/right edges as the light sections and the
+        // header, at every width. Using max-w-content in a panel shifted its
+        // content 16px in at narrow widths and broke the page's vertical line.
+        inset: '1108px',
         // Outer shell for the full-bleed navy panels. Without a cap they keep
         // growing on wide monitors while the content column stays at 1140,
         // which leaves the content marooned in the middle of a huge panel.

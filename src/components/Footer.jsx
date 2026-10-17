@@ -42,7 +42,10 @@ export default function Footer() {
             <p className="font-heading text-small font-semibold uppercase tracking-[0.12em] text-white">
               {t('footer.linksHeading')}
             </p>
-            <ul className="mt-2 grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-1">
+            {/* Two columns at every width: as a single column the seven links
+                made this the tallest footer column by far, leaving empty space
+                under the other two. */}
+            <ul className="mt-2 grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-6 gap-y-2">
               {sections.map((id) => (
                 <li key={id}>
                   <a href={`#${id}`} className="rounded hover:text-white">

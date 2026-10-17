@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import Button from './ui/Button.jsx';
-import DarkPanel from './ui/DarkPanel.jsx';
+import DarkPanel, { PanelContainer } from './ui/DarkPanel.jsx';
 import Icon from './ui/Icon.jsx';
 import { Eyebrow, H2 } from './ui/Section.jsx';
 import Squiggle from './ui/Squiggle.jsx';
@@ -40,7 +40,7 @@ export default function HowItWorks() {
   return (
     <DarkPanel id="cara">
       <Squiggle shape="squiggle" className="right-12 top-10 h-8 w-20" />
-      <div className="mx-auto max-w-content px-6 py-14 md:px-12 md:py-24">
+      <PanelContainer className="py-14 md:py-24">
         <Eyebrow dark>{t('how.eyebrow')}</Eyebrow>
         <H2 dark>{t('how.heading')}</H2>
 
@@ -121,7 +121,7 @@ export default function HowItWorks() {
             <Icon name="arrowRight" className="h-5 w-5" />
           </Button>
         </div>
-      </div>
+      </PanelContainer>
     </DarkPanel>
   );
 }

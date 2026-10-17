@@ -24,7 +24,7 @@ export default function WhyUs() {
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-100 text-navy-900 md:absolute md:right-5 md:top-5 md:h-11 md:w-11">
                 <Icon name={icons[i]} className="h-4 w-4 md:h-5 md:w-5" />
               </span>
-              <h3 className="font-heading text-h3 font-semibold text-slate-900 md:mt-12 md:text-h3-lg">{card.title}</h3>
+              <h3 className="font-heading text-h3 font-semibold text-slate-900 md:mt-12 md:min-h-[2.6em] md:text-h3-lg">{card.title}</h3>
             </div>
             <p className="mt-2">{card.body}</p>
           </Card>

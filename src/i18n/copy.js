@@ -23,7 +23,9 @@ export const copy = {
       },
     },
     hero: {
-      headline: 'Pembiayaan Peribadi Penjawat Awam & Swasta',
+      // "\n" marks the phrase break. Hero renders each phrase as its own line so
+      // a narrow screen wraps within a phrase, never across "Pembiayaan Peribadi".
+      headline: 'Pembiayaan Peribadi\nPenjawat Awam & Swasta',
       sub: 'Kami bantu anda banding pakej pembiayaan daripada beberapa bank dan koperasi, dan uruskan permohonan dari awal hingga akhir.',
       cta: 'Semak Kelayakan Percuma',
       reassurance: 'Tiada bayaran pendahuluan. Semakan mengambil masa kurang 1 minit.',
@@ -271,7 +273,7 @@ export const copy = {
       },
     },
     hero: {
-      headline: 'Personal Financing for Public & Private Sectors',
+      headline: 'Personal Financing for\nPublic & Private Sectors',
       sub: 'We compare financing packages across several banks and cooperatives, and handle your application from start to finish.',
       cta: 'Check Your Eligibility',
       reassurance: 'No upfront payment. Takes under a minute.',

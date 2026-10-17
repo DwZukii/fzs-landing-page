@@ -38,8 +38,9 @@ const viewBoxes = { squiggle: '0 0 74 44', burst: '0 0 74 74', dots: '0 0 60 36'
 
 // `from` is the breakpoint the accent appears at. Accents anchored to an
 // element that only takes its final position at lg (the hero photo) need
-// 'lg', or they drift off on their own between md and lg.
-const appearsAt = { md: 'md:block', lg: 'lg:block' };
+// 'lg', or they drift off on their own between md and lg. 'xl' is for accents
+// that sit outside the photo and only have room beside it from 1280px.
+const appearsAt = { md: 'md:block', lg: 'lg:block', xl: 'xl:block' };
 
 export default function Squiggle({ shape = 'squiggle', from = 'md', className = '' }) {
   return (

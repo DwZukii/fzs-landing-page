@@ -1,3 +1,11 @@
+// Content column for use inside a DarkPanel. Lines up exactly with the light
+// sections' Container and the header at md and up (see `inset` in the Tailwind
+// config for the arithmetic). On mobile it keeps its own padding so text never
+// sits tight against the panel's rounded edge.
+export function PanelContainer({ as: Tag = 'div', className = '', ...props }) {
+  return <Tag className={`mx-auto w-full max-w-inset px-5 md:px-8 ${className}`} {...props} />;
+}
+
 // Signature pattern: navy panel, 28px radius, inset from the viewport edge so
 // the sand page background shows around it. Capped at max-w-shell — past that
 // the panel would keep stretching while the content column inside stays at
